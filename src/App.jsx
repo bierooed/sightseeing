@@ -4,6 +4,7 @@ import * as tf from "@tensorflow/tfjs";
 import { useEffect, useRef, useState } from "react";
 import { loadModel, imageFormatting } from "tm-image-model";
 import FileInput from "./components/FileInput";
+import ImageUpload from "./components/ImageUpload";
 
 function App() {
   const [model, setModel] = useState();
@@ -29,11 +30,7 @@ function App() {
   return (
     <>
       {!!model ? (
-        <div className="">
-          <p className="text-red-400">hello</p>
-          <FileInput handleImage={handleImage} />
-          <canvas className="hidden" ref={canvasRef} />
-        </div>
+        <ImageUpload handleImage={handleImage} canvasRef={canvasRef} />
       ) : (
         "Loading..."
       )}
