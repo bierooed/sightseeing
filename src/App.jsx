@@ -26,7 +26,8 @@ function App() {
   return (
     <>
       {!!model ? (
-        <div>
+        <div className="">
+          <p className="text-red-400">hello</p>
           <canvas ref={canvasRef} />
         </div>
       ) : (
