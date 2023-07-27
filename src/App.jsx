@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import paths from "./paths";
 import Predict from "./components/Predict";
 import HomePage from "./components/HomePage";
+import Footer from "./components/Footer";
 
 function App() {
   const [model, setModel] = useState();
@@ -34,16 +35,19 @@ function App() {
   return (
     <>
       {!!model ? (
-        <Routes>
-          <Route exact path={paths.home} element={<HomePage />} />
-          <Route
-            path={paths.imageUpload}
-            element={
-              <ImageUpload handleImage={handleImage} canvasRef={canvasRef} />
-            }
-          />
-          <Route path={paths.predict} element={<Predict />} />
-        </Routes>
+        <section className="flex flex-col justify-between h-full">
+          <Routes>
+            <Route exact path={paths.home} element={<HomePage />} />
+            <Route
+              path={paths.imageUpload}
+              element={
+                <ImageUpload handleImage={handleImage} canvasRef={canvasRef} />
+              }
+            />
+            <Route path={paths.predict} element={<Predict />} />
+          </Routes>
+          <Footer />
+        </section>
       ) : (
         "Loading..."
       )}
