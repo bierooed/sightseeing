@@ -30,6 +30,7 @@ function App() {
     setImageUrl(URL.createObjectURL(imageFile));
     const image = await imageFormatting(imageFile, canvasRef);
     setImage(image);
+    console.log(imageFile);
   }
 
   return (

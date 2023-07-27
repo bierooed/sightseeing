@@ -7,7 +7,7 @@ export default function HomePage() {
     <main className="h-3/5 flex flex-col justify-around items-center">
       <h1 className="xs: w-full md:w-1/2 font-normal text-gray-700 dark:text-gray-400">
         🚧 The project is still under development, so the model can recognize
-        only <t />
+        only{" "}
         <span className="bg-yellow-200">
           "History Museum of Armenia", "Armenian National Opera and Ballet
           Theatre" and "The Government of the Republic of Armenia"
