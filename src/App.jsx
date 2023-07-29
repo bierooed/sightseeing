@@ -4,7 +4,7 @@ import * as tf from "@tensorflow/tfjs";
 import { useEffect, useRef, useState } from "react";
 import { loadModel, imageFormatting } from "tm-image-model";
 import ImageUpload from "./components/ImageUpload";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import paths from "./paths";
 import Predict from "./components/Predict";
 import HomePage from "./components/HomePage";
@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       {!!model ? (
-        <section className="flex flex-col justify-between h-full">
+        <section className="flex flex-col justify-between h-full ">
           <Routes>
             <Route exact path={paths.home} element={<HomePage />} />
             <Route
