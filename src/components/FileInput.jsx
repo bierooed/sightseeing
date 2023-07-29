@@ -6,11 +6,6 @@ export default function FileInput({ handleImage }) {
   useEffect(() => {
     drop.current.addEventListener("dragover", handleDragOver);
     drop.current.addEventListener("drop", handleDrop);
-
-    return () => {
-      drop.current.removeEventListener("dragover", handleDragOver);
-      drop.current.removeEventListener("drop", handleDrop);
-    };
   }, []);
 
   const handleDragOver = (e) => {
