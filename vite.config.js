@@ -9,6 +9,7 @@ export default defineConfig({
     middlewareMode: "ssr",
     fs: {
       strict: false,
+      base: "./api",
     },
   },
 });
