@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import paths from "../paths";
 export default function Footer() {
   return (
     <footer className="mt-6 flex flex-wrap justify-around items-center">
@@ -18,7 +19,12 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <h3 className="mt-6">Developed with love in Armenia 🇦🇲</h3>
+      <Link to={paths.home} className="mt-6 ">
+        <span className="underline decoration-gray-500">
+          Developed with love in Armenia
+        </span>{" "}
+        🇦🇲
+      </Link>
     </footer>
   );
 }
