@@ -26,8 +26,8 @@ export default function Predict({ image, imageUrl, model }) {
         <div className="flex md:flex-row xs: flex-col xs: items-center">
           <img className="w-72" src={imageUrl} />
 
-          <div className="p-12">
-            <div>
+          <div>
+            <div className="mt-12">
               <h3>
                 With {prediction.probability.toFixed(2) * 100}% probability it's{" "}
                 <span className="bg-yellow-200 ">{prediction.className}</span>
