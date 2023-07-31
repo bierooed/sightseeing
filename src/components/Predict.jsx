@@ -35,7 +35,7 @@ export default function Predict({ image, imageUrl, model }) {
               onClick={predict}
               className="text-white bg-gray-700 hover:bg-gray-900 focus:outline-none font-medium rounded-lg text-sm mt-4 px-5 py-2.5 outline-none"
             >
-              Try again
+              Predict again
             </button>
           </div>
         </div>
