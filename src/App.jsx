@@ -31,9 +31,8 @@ function App() {
     setImageUrl(URL.createObjectURL(imageFile));
     const formattedImage = await imageFormatting(imageFile, canvasRef);
     setImage(formattedImage);
-
     if (!!formattedImage) {
-      navigate("/predict");
+      setTimeout(() => navigate("/predict"), 0);
     }
   }
 
@@ -46,7 +45,11 @@ function App() {
             <Route
               path={paths.imageUpload}
               element={
-                <ImageUpload handleImage={handleImage} canvasRef={canvasRef} />
+                <ImageUpload
+                  image={image}
+                  handleImage={handleImage}
+                  canvasRef={canvasRef}
+                />
               }
             />
             <Route
