@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import info from "../info";
 
 export default function Predict({ image, imageUrl, model }) {
   const [prediction, setPrediction] = useState({});
@@ -26,10 +27,13 @@ export default function Predict({ image, imageUrl, model }) {
           <img className="w-72" src={imageUrl} />
 
           <div className="p-12">
-            <h3>
-              With {prediction.probability.toFixed(2) * 100}% probability it's{" "}
-              <span className="bg-yellow-200 ">{prediction.className}</span>
-            </h3>
+            <div>
+              <h3>
+                With {prediction.probability.toFixed(2) * 100}% probability it's{" "}
+                <span className="bg-yellow-200 ">{prediction.className}</span>
+              </h3>
+              <p>{info[prediction.className]}</p>
+            </div>
 
             <button
               onClick={predict}
